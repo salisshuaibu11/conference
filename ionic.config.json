@@ -1,0 +1,7 @@
+{
+  "name": "conf",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
