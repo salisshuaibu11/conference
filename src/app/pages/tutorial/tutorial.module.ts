@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
+import { SwiperModule } from "swiper/angular";
 
 import { TutorialPageRoutingModule } from './tutorial-routing.module';
 
@@ -13,7 +14,8 @@ import { TutorialPage } from './tutorial.page';
     CommonModule,
     FormsModule,
     IonicModule,
-    TutorialPageRoutingModule
+    TutorialPageRoutingModule,
+    SwiperModule
   ],
   declarations: [TutorialPage]
 })
