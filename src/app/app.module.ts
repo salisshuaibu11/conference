@@ -8,8 +8,10 @@ import { RouteReuseStrategy } from '@angular/router';
 import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 import { IonicStorageModule } from "@ionic/storage-angular";
 
+import { ServiceWorkerModule } from "@angular/service-worker";
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
+import { environment } from "src/environments/environment.prod";
 
 @NgModule({
   declarations: [AppComponent],
@@ -20,6 +22,9 @@ import { AppRoutingModule } from './app-routing.module';
     HttpClientModule,
     FormsModule,
     IonicStorageModule.forRoot(),
+    ServiceWorkerModule.register('ngsw-worker.js', {
+      enabled: environment.production
+    })
   ],
   providers: [InAppBrowser,{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
   bootstrap: [AppComponent],
