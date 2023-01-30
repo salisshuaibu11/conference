@@ -22,6 +22,10 @@ const routes: Routes = [
   {
     path: 'about-popover',
     loadChildren: () => import('./pages/about-popover/about-popover.module').then( m => m.AboutPopoverPageModule)
+  },
+  {
+    path: 'speakers',
+    loadChildren: () => import('./pages/speaker-list/speaker-list.module').then( m => m.SpeakerListPageModule)
   }
 ];
 
