@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-
 import { TabsPagePage } from './tabs-page.page';
 
 const routes: Routes = [
@@ -8,6 +7,15 @@ const routes: Routes = [
     path: 'tabs',
     component: TabsPagePage,
     children: [
+      {
+        path: '',
+        children: [
+          {
+            path: 'schedule',
+            loadChildren: () => import('../schedule/schedule.module').then(m => m.SchedulePageModule)
+          }
+        ]
+      },
       {
         path: 'speakers',
         children: [
