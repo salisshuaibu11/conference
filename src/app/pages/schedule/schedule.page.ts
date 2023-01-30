@@ -4,6 +4,7 @@ import { AlertController, IonList, IonRouterOutlet, LoadingController, ModalCont
 
 import { ConferenceData } from '../../providers/conference-data';
 import { UserData } from "../../providers/user-data";
+import { ScheduleFilterPage } from '../schedule-filter/schedule-filter.page';
 
 @Component({
   selector: 'app-schedule',
@@ -58,7 +59,7 @@ export class SchedulePage implements OnInit {
 
   async presentFilter() {
     const modal = await this.modalCtrl.create({
-      component: 'Hello',
+      component: ScheduleFilterPage,
       swipeToClose: true,
       presentingElement: this.routerOutlet.nativeEl,
       componentProps: { exculedTracks: this.excludeTracks }

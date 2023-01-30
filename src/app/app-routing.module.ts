@@ -31,6 +31,10 @@ const routes: Routes = [
     path: 'support',
     loadChildren: () => import('./pages/support/support.module').then( m => m.SupportPageModule)
   },
+  {
+    path: 'schedule-filter',
+    loadChildren: () => import('./pages/schedule-filter/schedule-filter.module').then( m => m.ScheduleFilterPageModule)
+  },
 ];
 
 @NgModule({
