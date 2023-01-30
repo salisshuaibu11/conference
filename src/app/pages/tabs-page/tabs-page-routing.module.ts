@@ -8,11 +8,15 @@ const routes: Routes = [
     component: TabsPagePage,
     children: [
       {
-        path: '',
+        path: 'schedule',
         children: [
           {
-            path: 'schedule',
+            path: '',
             loadChildren: () => import('../schedule/schedule.module').then(m => m.SchedulePageModule)
+          },
+          {
+            path: 'session/:sessionId',
+            loadChildren: () => import('../session-detail/session-detail.module').then(m => m.SessionDetailPageModule)
           }
         ]
       },
