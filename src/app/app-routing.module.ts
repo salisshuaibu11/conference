@@ -35,6 +35,10 @@ const routes: Routes = [
     path: 'schedule-filter',
     loadChildren: () => import('./pages/schedule-filter/schedule-filter.module').then( m => m.ScheduleFilterPageModule)
   },
+  {
+    path: 'signup',
+    loadChildren: () => import('./pages/signup/signup.module').then( m => m.SignupPageModule)
+  },
 ];
 
 @NgModule({
